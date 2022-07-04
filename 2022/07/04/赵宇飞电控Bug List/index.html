@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>赵宇飞电控Bug List | XJTU-赵赵</title><meta name="keywords" content="XJTU-赵赵博客,机器人，博客，技术，分享,XJTU"><meta name="author" content="xjtu-zhaozhao"><meta name="copyright" content="xjtu-zhaozhao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="赵宇飞电控Bug List1.遥控器对频(2021.10.11)关于遥控器对频问题，对频是固有，无论程序只要上电就开始对频，一开始怎么都是红色的（即对频失败），后把电源接上变绿（即成功对频）。 2.DMA接受遥控器(2021.10.11)通过使用DMA但是收不到数据，可能配置上存在问题，先尝试简单的串口中断，也不行。(未解决) 预解决措施：问问同志们或者明天下午直接用整车上的实验。 （2021.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="赵宇飞电控Bug List">
+<meta property="og:url" content="https://xjtu-zhaozhao.github.io/2022/07/04/%E8%B5%B5%E5%AE%87%E9%A3%9E%E7%94%B5%E6%8E%A7Bug%20List/index.html">
+<meta property="og:site_name" content="XJTU-赵赵">
+<meta property="og:description" content="赵宇飞电控Bug List1.遥控器对频(2021.10.11)关于遥控器对频问题，对频是固有，无论程序只要上电就开始对频，一开始怎么都是红色的（即对频失败），后把电源接上变绿（即成功对频）。 2.DMA接受遥控器(2021.10.11)通过使用DMA但是收不到数据，可能配置上存在问题，先尝试简单的串口中断，也不行。(未解决) 预解决措施：问问同志们或者明天下午直接用整车上的实验。 （2021.1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="article:published_time" content="2022-07-04T15:01:30.000Z">
+<meta property="article:modified_time" content="2022-07-04T16:10:25.335Z">
+<meta property="article:author" content="xjtu-zhaozhao">
+<meta property="article:tag" content="XJTU-赵赵博客,机器人，博客，技术，分享,XJTU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://xjtu-zhaozhao.github.io/2022/07/04/%E8%B5%B5%E5%AE%87%E9%A3%9E%E7%94%B5%E6%8E%A7Bug%20List/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '赵宇飞电控Bug List',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-07-05 00:10:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">XJTU-赵赵</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">赵宇飞电控Bug List</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-04T15:01:30.000Z" title="发表于 2022-07-04 23:01:30">2022-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-04T16:10:25.335Z" title="更新于 2022-07-05 00:10:25">2022-07-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="赵宇飞电控Bug List"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="赵宇飞电控Bug-List"><a href="#赵宇飞电控Bug-List" class="headerlink" title="赵宇飞电控Bug List"></a>赵宇飞电控Bug List</h1><h2 id="1-遥控器对频"><a href="#1-遥控器对频" class="headerlink" title="1.遥控器对频"></a>1.遥控器对频</h2><p>(2021.10.11)关于遥控器对频问题，对频是固有，无论程序只要上电就开始对频，一开始怎么都是红色的（即对频失败），后把电源接上变绿（即成功对频）。</p>
+<h2 id="2-DMA接受遥控器"><a href="#2-DMA接受遥控器" class="headerlink" title="2.DMA接受遥控器"></a>2.DMA接受遥控器</h2><p>(2021.10.11)通过使用DMA但是收不到数据，可能配置上存在问题，先尝试简单的串口中断，也不行。(未解决)</p>
+<p>预解决措施：问问同志们或者明天下午直接用整车上的实验。</p>
+<p>（2021.10.12）通过看了CSDN大致上发现了问题，手册上DMA2—channel4—stream5才对应USART1_Rx。明天下午应该没有什么事情，可以去测试测试（p s ：参考的代码可以将led放在中断里面说明应该没什么问题）</p>
+<p>问题解决：确实是csdn这个需要改成dma2</p>
+<h2 id="3-can2通信"><a href="#3-can2通信" class="headerlink" title="3.can2通信"></a>3.can2通信</h2><p>（2021.10.13）can2通讯没搞成，然后尝试之前调试的can1通讯，发现也用不了，问题可能出在can线上。有极大可能是我can线焊的问题。</p>
+<p>（2021.10.17）经检验不是can线问题，重新配置了FIFO1，各种改1后，在主函数中接受不太彳亍，故我选择can接受中断，成功。但是主函数不能接受问题依然存在，需要思考，最后不行再问组长或者队友。</p>
+<h2 id="4-can2通信"><a href="#4-can2通信" class="headerlink" title="4.can2通信"></a>4.can2通信</h2><p>（2021.10.17）写了云台程序，但是can2发送就会出问题，会无法看到 RC_Ctl 只要把can2发送程序，赋值canbuf程序注释掉，就可以得到RC_Ctl。</p>
+<p>(2021.10.18)问题发现：can的配置上绝对有问题，其他都正常，只要加上can的配置就出问题。但问题就在于配置上后中断函数可以运行。</p>
+<p>（2021.10.19）问题发现：can2可以使用，可以确实收到yaw轴的信息，但是在遥控器和can一起加入时候就有了问题。</p>
+<p>（2021.10.21）配置顺序有门道，必须先配置can再配置遥控器，不然收到的是乱码。</p>
+<p>（2021.10.21）特别注意，头文件顺序也有门道，遥控器头文件放在can前面，不然gg。</p>
+<p>(2021.10.21)最终can2通讯完美成功，应该仅仅是配置顺序的问题，并且理解了高八位低八位的搞法，非常的舒服。</p>
+<h2 id="5-底盘电机"><a href="#5-底盘电机" class="headerlink" title="5.底盘电机"></a>5.底盘电机</h2><p>(2021.10.18)底盘使用四个电机的时候不动，然后一点点减少电机，发现还是有点问题，最后对照速度环调试出一样的结果，疯转与正常差一个delay函数。可以再加两个电机试试。最后解决，问题应该是出在delay函数上和int16_t。</p>
+<h2 id="6-陀螺仪"><a href="#6-陀螺仪" class="headerlink" title="6.陀螺仪"></a>6.陀螺仪</h2><p>（2021.10.27）陀螺仪调出来了，但是存在问题，返回值不稳定，也不知道是什么原因造成的，有毛刺的感觉。最后组长帮忙解决了问题，问题在于串口中断接收有部分消息没接收到就解算了，所以存在0的现象。导致不稳定，虽然后续我也想到了，但是组长通过看j-link分析所得。</p>
+<h2 id="7-代码理解"><a href="#7-代码理解" class="headerlink" title="7.代码理解"></a>7.代码理解</h2><p>（2021.11.26）大致看了代码，现在我认为应该移植一个代码，方便自己理解使用。</p>
+<h2 id="8-代码框架出错"><a href="#8-代码框架出错" class="headerlink" title="8.代码框架出错"></a>8.代码框架出错</h2><p>(2021.12.3) ddl烧屁股了，只能先调试调试，感受一下，再问问组长那个RM_Code_LL的问题。如何解决写在这里得了。首先是注意那个FreeRTOSConfig.h 中间有个宏注释systick需要把他注释掉，不然报错。</p>
+<p>(2021.12.5)最后还是问了问组长，终于解决了，我真是个废物，应该学习组长方法，在于打断点，最后问题在初始化上，因为有些外设没有，所以初始化就卡在了那里，删去多于后成功。</p>
+<h2 id="9-视觉"><a href="#9-视觉" class="headerlink" title="9.视觉"></a>9.视觉</h2><p>(2022.1.21)视觉发回来数据都不太对，然后中断也能进入，最后通过联系视觉得到，看到了问题，摄像头焦距过大，根本就拍摄不到装甲板。</p>
+<h2 id="10-视觉"><a href="#10-视觉" class="headerlink" title="10.视觉"></a>10.视觉</h2><p>（2022.2.16）存在x，y为nan的问题，袁震宇说是因为电控数据发送出问题导致自瞄跟着出问题，可以放在以后再去理解这个问题。</p>
+<p>##11.自瞄</p>
+<p>（2022.2.16）pitch自瞄有问题，感觉还是有点问题，关于那个pnpGet</p>
+<p>（2022.7.4）问题还是存在的，pitch解算必须使用pid来，与我所预期的构想有很大的问题</p>
+<h2 id="12-英雄子弹速度"><a href="#12-英雄子弹速度" class="headerlink" title="12.英雄子弹速度"></a>12.英雄子弹速度</h2><p>（2022.3.29）英雄子弹速度有问题，开始速度很低，调高摩擦轮转速后有好转，但是打n发后，速度在0.6+的时候速度能回到15.5，但是出现过一发14.4，与上次测量结果有很大误差，将底盘程序关掉后，与上次实验唯一区别在于摩擦轮热量和枪管螺丝，上次枪管只是简单装上并没有上螺丝，这次误差不小。</p>
+<p>（2022.3.29）打了多发后速度能稳，0.62可以稳15.1，与上次的15.4有些区别，但是区别不是很大可以接受？应该不是枪管的问题，枪管如果有问题的话应该不会稳定吧。对于这个会不会是摩擦轮的问题，可以选择过一段时间再来打一梭子尝试，我觉得组长那一套FrictionSpeedJudge非常的可以，通过其可以快速调整速度不稳定的问题，其实与我之前思考的有些相似，但是还是略有区别，可以考虑使用或者更改后使用。</p>
+<p>（2022.3.29）由浩晋告知，确实有影响，摩擦轮打多了会变软，所以我认为可以将函数进行调用，或者说改写，改写一个稳在15.3&#x2F;4左右的速度射击，组长的搞法好像很依赖是否发射，我觉得我可以通过使用获得速度作为一次发射的结果，然后在其发射后产生一个空挡，来修改摩擦轮转速，从而就像离散数学的操作方法一样来改变摩擦轮转速。</p>
+<h2 id="13-堵转保护"><a href="#13-堵转保护" class="headerlink" title="13.堵转保护"></a>13.堵转保护</h2><p>（2022.3.29）还需要了解一下feedmotor函数，因为上次出现过那种一下子打了很多发子弹的问题，需要考虑，可以从头来看，并且思考一下堵转的原理。</p>
+<p>（2022.7.4）代码还是有问题的，没有子弹会出现feedmotor突然转好多下，暂时没去考虑问题。堵转保护还是比较好理解</p>
+<p>##14.调试电机can</p>
+<p>（2022.4.28）在调试电机与电调过程中，出现大的问题，选用了功能正常的英雄机器人的云台版作为实验板，但是其返回不了数值，在英雄上能正常返回，返回数值只有angle，rpm为0，而且返回的angle固定不变，不管怎么转动，且can间断性中断。</p>
+<p>解决方案：属实蚌埠住了，云台版没有接电。</p>
+<p>##15.调试电机can线</p>
+<p>（2022.5.30）有真实收到数据，但是没有发送没有响应。</p>
+<p>程序单开测试后又没有反应</p>
+<p>解决方案：属实大傻逼，两根can线中间没有拿胶缠一下，导致两根can线短路了</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://xjtu-zhaozhao.github.io">xjtu-zhaozhao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xjtu-zhaozhao.github.io/2022/07/04/%E8%B5%B5%E5%AE%87%E9%A3%9E%E7%94%B5%E6%8E%A7Bug%20List/">https://xjtu-zhaozhao.github.io/2022/07/04/%E8%B5%B5%E5%AE%87%E9%A3%9E%E7%94%B5%E6%8E%A7Bug%20List/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xjtu-zhaozhao.github.io" target="_blank">XJTU-赵赵</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/07/04/HAL%E5%BA%93-CubeMX-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"><img class="next-cover" src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">HAL库-CubeMX-学习总结</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xjtu-zhaozhao</div><div class="author-info__description">一个喜欢机器人的大学生</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xjtu-zhaozhao" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:466596880@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%B5%E5%AE%87%E9%A3%9E%E7%94%B5%E6%8E%A7Bug-List"><span class="toc-number">1.</span> <span class="toc-text">赵宇飞电控Bug List</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%81%A5%E6%8E%A7%E5%99%A8%E5%AF%B9%E9%A2%91"><span class="toc-number">1.1.</span> <span class="toc-text">1.遥控器对频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-DMA%E6%8E%A5%E5%8F%97%E9%81%A5%E6%8E%A7%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">2.DMA接受遥控器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-can2%E9%80%9A%E4%BF%A1"><span class="toc-number">1.3.</span> <span class="toc-text">3.can2通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-can2%E9%80%9A%E4%BF%A1"><span class="toc-number">1.4.</span> <span class="toc-text">4.can2通信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%BA%95%E7%9B%98%E7%94%B5%E6%9C%BA"><span class="toc-number">1.5.</span> <span class="toc-text">5.底盘电机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%99%80%E8%9E%BA%E4%BB%AA"><span class="toc-number">1.6.</span> <span class="toc-text">6.陀螺仪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%BB%A3%E7%A0%81%E7%90%86%E8%A7%A3"><span class="toc-number">1.7.</span> <span class="toc-text">7.代码理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E4%BB%A3%E7%A0%81%E6%A1%86%E6%9E%B6%E5%87%BA%E9%94%99"><span class="toc-number">1.8.</span> <span class="toc-text">8.代码框架出错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E8%A7%86%E8%A7%89"><span class="toc-number">1.9.</span> <span class="toc-text">9.视觉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E8%A7%86%E8%A7%89"><span class="toc-number">1.10.</span> <span class="toc-text">10.视觉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E8%8B%B1%E9%9B%84%E5%AD%90%E5%BC%B9%E9%80%9F%E5%BA%A6"><span class="toc-number">1.11.</span> <span class="toc-text">12.英雄子弹速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E5%A0%B5%E8%BD%AC%E4%BF%9D%E6%8A%A4"><span class="toc-number">1.12.</span> <span class="toc-text">13.堵转保护</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/07/04/%E8%B5%B5%E5%AE%87%E9%A3%9E%E7%94%B5%E6%8E%A7Bug%20List/" title="赵宇飞电控Bug List"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="赵宇飞电控Bug List"/></a><div class="content"><a class="title" href="/2022/07/04/%E8%B5%B5%E5%AE%87%E9%A3%9E%E7%94%B5%E6%8E%A7Bug%20List/" title="赵宇飞电控Bug List">赵宇飞电控Bug List</a><time datetime="2022-07-04T15:01:30.000Z" title="发表于 2022-07-04 23:01:30">2022-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/04/HAL%E5%BA%93-CubeMX-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="HAL库-CubeMX-学习总结"><img src="https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HAL库-CubeMX-学习总结"/></a><div class="content"><a class="title" href="/2022/07/04/HAL%E5%BA%93-CubeMX-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="HAL库-CubeMX-学习总结">HAL库-CubeMX-学习总结</a><time datetime="2022-07-04T15:01:00.000Z" title="发表于 2022-07-04 23:01:00">2022-07-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By xjtu-zhaozhao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
